@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on A Hugo website</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on A Hugo website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Capacity Occupied By Different Sector In Daily Shelter Occupancy during COV-19</title>
+      <link>/1/01/01/the-capacity-occupied-by-different-sector-in-daily-shelter-occupancy-during-cov-19/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/the-capacity-occupied-by-different-sector-in-daily-shelter-occupancy-during-cov-19/</guid>
+      <description>setwd(&amp;#39;~/Desktop/STA304&amp;#39;) dat = read.csv(&amp;#39;DSOC.csv&amp;#39;) Abstract: COV-19 has a huge impact on the world, and it has also affected the normal lives of many people in Canada. As for the homeless crowd, they have been greatly affected after the government introduced restrictions on the number of indoor people. I hope to observe the impact of the epidemic on their residences through this experiment.
+The data set show all the active shelters serving the City of Toronto.</description>
+    </item>
+    
+  </channel>
+</rss>
