@@ -6,11 +6,11 @@ output: html_document
 ---
 ```{r, include=FALSE}
 library(ggplot2)
+library(opendatatoronto)
 ```
 
 ```{r}
-setwd('~/Desktop/STA304')
-dat = read.csv('DSOC.csv')
+dat = data.frame(get_resource('5097e562-9ee0-41d2-bfd7-86878cf8fbcd'))
 ```
 
 Abstract: COV-19 has a huge impact on the world, and it has also affected the normal lives of many people in Canada. As for the homeless crowd, they have been greatly affected after the government introduced restrictions on the number of indoor people. I hope to observe the impact of the epidemic on their residences through this experiment.
@@ -25,6 +25,12 @@ dat[is.na(dat)] = 0
 ```
 
 ```{r}
+#Calculate all dates in months
+dat$month = format(as.Date(dat$OCCUPANCY_DATE),'%m')
+dat = dat[order(dat$month),]
+```
+
+```{r}
 #Divided 5 different types of sectors into 5 groups and help people know the occupancy rate in different groups before 2020/09/19
 female = dat[which(dat$SECTOR=='Women'),]
 male = dat[which(dat$SECTOR=='Men'),]
@@ -33,10 +39,7 @@ teen = dat[which(dat$SECTOR=='Youth'),]
 both = dat[which(dat$SECTOR=='Co-ed'),]
 ```
 
-```{r}
-#Calculate all dates in months
-dat$month = format(as.Date(dat$OCCUPANCY_DATE),'%m')
-```
+
 
 ```{r}
 #Calculate the total occupancy rate
@@ -150,3 +153,8 @@ Compare to the other types of sectors, family have more affection during this pe
 
 ### Reference
 Open Data Dataset. (n.d.). Retrieved September 21, 2020, from https://open.toronto.ca/dataset/daily-shelter-occupancy/
+
+  Sharla Gelfand (2020). opendatatoronto: Access the City of Toronto Open Data Portal. R package version
+  0.1.3. https://CRAN.R-project.org/package=opendatatoronto
+  
+   H. Wickham. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York, 2016.
